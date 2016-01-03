@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>Lucky Draw</title>
+  <script>
+    function print(a,b,i){
+      var time = i*5000;
+      window.setTimeout(function(){
+        document.getElementById('group'+i).innerHTML = "group "+a;
+      },time);
+      window.setTimeout(function(){
+        document.getElementById('project'+i).innerHTML = " : Project title No: "+b;
+      },time+2000);
+    }
+    function draw(numberOfGroups){
+      var groupNumbers = new Array();
+      var projectNumbers = new Array();
+      for (i = 0 ; i < numberOfGroups ; i++){
+        groupNumbers[i]= i+1;
+        projectNumbers[i] = i+1;
+      }
+      for (i = numberOfGroups, j = 1; i>0 ; i--, j++){
+        chosenGroupIndex = Math.floor(Math.random() * i);
+        chosenProjectIndex = Math.floor(Math.random() * i);
+        chosenGroup = groupNumbers[chosenGroupIndex];
+        groupNumbers.splice(chosenGroupIndex,1);
+        chosenProject = projectNumbers[chosenProjectIndex];
+        projectNumbers.splice(chosenProjectIndex,1);
+        print(chosenGroup,chosenProject,j);
+      }
+    }
+  </script>
+</head>
+<body >
+
+  <center>
+    <h1 style="color:navy;">Lucky Draw</h1>
+    <input type="button" value="   Go!   " onclick="draw(8)"/><hr style="width:300px;">
+    <table style="font-size:20pt;color:navy;width:300px;height:400px">
+      <tr><td id="group1"></td><td id="project1"></td></tr>
+      <tr><td id="group2"></td><td id="project2"></td></tr>
+      <tr><td id="group3"></td><td id="project3"></td></tr>
+      <tr><td id="group4"></td><td id="project4"></td></tr>
+      <tr><td id="group5"></td><td id="project5"></td></tr>
+      <tr><td id="group6"></td><td id="project6"></td></tr>
+      <tr><td id="group7"></td><td id="project7"></td></tr>
+      <tr><td id="group8"></td><td id="project8"></td></tr>
+    </table>
+  </center>
+
+</body>
+</html>
