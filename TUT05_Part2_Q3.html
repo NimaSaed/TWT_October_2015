@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+    	function num(){
+        document.forms[0].number.value = "first number";
+        document.forms[1].number.value = "second number";
+        //or
+        //document.spec.number.value = "first number";
+        //document.acc.number.value = "second number";
+    	}
+    </script>
+  </head>
+  <body onload="num()">
+    This is a First Form (spec):
+    <form name="spec">
+      <input type='text' name='number'>
+    </form>
+    <hr>
+    This is a Second Form (acc):
+    <form name="acc">
+      <input type='text' name='number'>
+    </form>
+  </body>
+</html>
