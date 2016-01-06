@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type=text/JavaScript>
+     	function validate()
+    	{
+        if (document.myForm.name.value == ""){
+        alert("key in the name!");
+        return false;
+        }
+        if (document.myForm.email.value.indexOf("@") < 0 || document.myForm.email.value.lastIndexOf(".") < 0){
+          alert("Invalid email address!");
+          return false;
+        }
+        if (document.myForm.age.value == "" || isNaN(document.myForm.age.value)){
+          alert("Key in valid age!");
+          return false;
+        }
+   	  }
+    </script>
+  </head>
+  <body>
+    <form name="myForm" onsubmit="return validate()" >
+      <table>
+   	<tr><td>Name:</td><td><input type="text" name="name"></td></tr>
+   	<tr><td>Email:</td><td><input type="text" name="email"></td></tr>
+   	<tr><td>Age:</td><td><input type="text" name="age" size=8
+   	maxlength=2></td></tr>
+
+   	<tr>
+        <td>Gender:</td>
+        <td><select name="gender">
+        <option value="male">Male</option>
+        <option value="female" selected>Female</option>
+        </select></td>
+        </tr>
+
+   	<tr><td></td>
+            <td><input type="submit" value="Enter">&nbsp;
+            <input type="reset" value="Clear"></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
