@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+    function calculate(form) {
+      var num =parseInt(form.number.value);
+      if (isNaN(num) || num <= 0){
+        form.result.value = (form.number.value + " is not a valid number! Try again!");
+      }
+      else if( num == 1 ) form.result.value = (form.number.value + " is not a Prime number!");
+      else if (num == 2 ) form.result.value = (form.number.value + " is a Prime number!");
+      else {
+        for (i = 2; i< num ; i++){
+
+          var prime = "Yes";
+
+          if (num%i == 0){
+            prime = "No";
+            form.result.value = (form.number.value + " is not a Prime number! It is divided by "+i+" !");
+            break;
+          }
+
+        }
+        if (prime == "Yes"){
+          form.result.value = (form.number.value + " is a prime!");
+
+        }
+
+
+      }
+    }
+
+
+
+    </script>
+  </head>
+  <body>
+     <center>
+  <form name=form>
+    <h2>Prime Number Calculator</h2><p>
+    Please enter a number:<br>
+    <input type='text' name='number' size=7>
+    <input type='button' value="Calculate" onClick="calculate(this.form)">
+    <p>
+    <input type='text' name='result' size=45 value="">
+  </form>
+     </center>
+    </body>
+  </html>
