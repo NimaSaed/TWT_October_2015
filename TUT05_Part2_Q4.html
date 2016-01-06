@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+    	function gowhere(){
+        index = document.myform.togo.selectedIndex;
+        window.location = document.myform.togo.options[index].value;
+
+    	}
+    	</script>
+  </head>
+  <body>
+    <form name=myform>
+    	<select name="togo" onchange="gowhere()">
+    	<option>Select a url</option>
+    	<option value="http://www.mmu.edu.my">Multimedia University</option>
+    	<option value="http://mmls.mmu.edu.my">MMU Course Online</option>
+    	<option value="http://vlib.mmu.edu.my">MMU Library</option>
+    	</select>
+    	</form>
+  </body>
+</html>
