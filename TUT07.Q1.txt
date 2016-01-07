@@ -1,0 +1,27 @@
+C:\Windows\System32\drivers\etc
+
+hosts
+
+127.0.0.1 www.your_website_name.com
+
+C:\xampp\apache\conf\extra
+
+httpd-vhosts.conf
+
+<VirtualHost *:80>
+    ##ServerAdmin webmaster@dummy-host.example.com
+    DocumentRoot "C:/xampp/htdocs"
+    ##ServerName dummy-host.example.com
+    ServerAlias localhost
+    ##ErrorLog "logs/dummy-host.example.com-error.log"
+    ##CustomLog "logs/dummy-host.example.com-access.log" common
+</VirtualHost>
+
+<VirtualHost *:80>
+    ##ServerAdmin webmaster@dummy-host.example.com
+    DocumentRoot "C:/xampp/htdocs/your_website_folder"
+    ##ServerName dummy-host.example.com
+    ServerAlias www.your_website_name.com
+    ##ErrorLog "logs/dummy-host.example.com-error.log"
+    ##CustomLog "logs/dummy-host.example.com-access.log" common
+</VirtualHost>
