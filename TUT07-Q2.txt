@@ -1,0 +1,11 @@
+a)  SELECT `buyer_name`, `buyer_phone` FROM `buyer` ORDER BY `buyer_name` ASC
+b)
+	*- SELECT sales.sales_name FROM sales, buyer ,invoice where buyer.buyer_name = "Jeremy" ANDsales.sales_id = invoice.sales_id AND buyer.buyer_id = invoice.buyer_id
+	*- SELECT `sales_name` from sales INNER JOIN invoice ON sales.sales_id = invoice.sales_id INNER JOIN buyer ON invoice.buyer_id =buyer.buyer_id where buyer.buyer_name = "Jeremy"\
+
+c)
+	*- SELECT sales.sales_name, sales.sales_phone from sales, invoice, item where item.item_type ="Computer" AND (invoice.invoice_date BETWEEN '2008-12-01' AND '2008-12-31') AND sales.sales_id= invoice.sales_id AND item.item_id = invoice.item_id
+	*- SELECT `sales_name`, `sales_phone` FROM `sales` INNER JOIN invoice ON invoice.sales_id =sales.sales_id INNER JOIN item ON item.item_id = invoice.item_id WHERE item.item_type ="Computer" AND (invoice.invoice_date BETWEEN '2008-12-01' AND '2008-12-31')
+
+d)  SELECT `item_name`,`item_price` FROM `item` WHERE item_type != "computer"
+e) SELECT `item_name`,`item_type`, min(`item_price`) as price FROM `item`
