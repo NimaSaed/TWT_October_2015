@@ -1,0 +1,28 @@
+<html>
+<head>
+  <script>
+    function PrimeSum(num2) {
+      // body...
+      if (num2 > 2 )sum = 2;
+      else sum = 0;
+
+      for (num = 1 ; num < num2 ; num++ ){
+        for (i = 2; i< num ; i++){
+            var prime = "Yes";
+            if (num%i == 0){
+              prime = "No";
+
+              break;
+            }
+          }
+          if (prime == "Yes"){
+            sum = sum + num;
+
+          }
+        }
+        document.write(sum);
+    }
+  </script>
+
+</head>
+</html>
