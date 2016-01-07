@@ -1,0 +1,43 @@
+Question 1:
+
+1.	select now();
+2.	select 12+2;
+3.	show databases;
+4.	use database_name;
+	show tables;
+  (example of database_name: information_schema)
+5.	describe table_name;
+  (example of table_name: events)
+6.	select * from table_name;
+  (example of table_name: engines)
+
+Question 2:
+
+a)	create database TWT2231;
+b)	create table student (
+  	Student_id int(10) primary key,
+  	Name varchar(50),
+  	Email varchar(50),
+  	Majors varchar(50)
+  	);
+
+    create table exam_marks (
+    	Student_id int(10) primary key,
+    	Marks int(3),
+    	);
+
+c)	For table named student:
+Insert into student (Student_id, Name, Email, Majors) values ("10000000" , "Jane", "jane@mmu.edu.my" , "ST")
+
+For table named exam_marks:
+Insert into exam_marks (Student_id, Marks) values ("10000000" , 100);
+
+d)	describe student;            
+e)	select name from student where Majors = "ST";            
+f)	update exam_marks set Marks = 70 where Student_id = "10400000";
+
+g)	delete from student limit 2;
+	  delete from exam_marks limit 2;
+	  
+h)	alter table student change column Email Email_address varchar(45);
+i)	alter table student drop Majors;
