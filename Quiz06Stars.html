@@ -1,0 +1,16 @@
+<html>
+<head>
+  <script>
+    function stars(row) {
+      h = row;
+      for (i = 0 ; i< row ; i++){
+        for (k = h-1 ; k > 0 ; k--) document.writeln("&nbsp");
+        for (j = 0 ; j<=i*2; j++) document.write("*");
+        document.write("<br>");
+        h--;
+      }
+    }
+  </script>
+</head>
+<body onload="stars(10)"></body>
+</html>
