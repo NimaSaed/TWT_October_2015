@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE cars_catalogue SYSTEM "TUT10Q1.dtd">
+
+<cars_catalogue>
+  <car year="2000">
+    <made>
+      Toyota
+    </made>
+    <model>
+      corola
+    </model>
+    <color>
+      white
+    </color>
+    <tran_type>
+      auto
+    </tran_type>
+    <engine>
+      <num_of_cylinders>
+        4
+      </num_of_cylinders>
+      <fuel_system>
+        n
+      </fuel_system>
+    </engine>
+  </car>
+</cars_catalogue>

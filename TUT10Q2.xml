@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE student[
+<!ELEMENT student (student_id, name, major,faculty, current_courses)>
+<!ELEMENT current_courses (title, course_code, lecture)>
+
+<!ELEMENT student_id (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT major (#PCDATA)>
+<!ELEMENT faculty (#PCDATA)>
+
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT course_code (#PCDATA)>
+<!ELEMENT lecture (#PCDATA)>
+]>
+
+<student>
+  <student_id></student_id>
+  <name></name>
+  <major></major>
+  <faculty></faculty>
+  <current_courses>
+    <course>
+      <title></title>
+      <course_code></course_code>
+      <lecturer></lecturer>
+    </course>
+  </current_courses>
+</student>

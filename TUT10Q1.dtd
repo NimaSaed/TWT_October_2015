@@ -1,0 +1,12 @@
+<!ELEMENT cars_catalogue (car*)>
+<!ELEMENT car (made, model, color, engine, tran_type)>
+<!ATTLIST car year CDATA #REQUIRED>
+
+<!ELEMENT engine (num_of_cylinders, fuel_system)>
+<!ELEMENT num_of_cylinders (#PCDATA)>
+<!ELEMENT fuel_system (#PCDATA)>
+
+<!ELEMENT made (#PCDATA)>
+<!ELEMENT model (#PCDATA)>
+<!ELEMENT color (#PCDATA)>
+<!ELEMENT tran_type (#PCDATA)>
